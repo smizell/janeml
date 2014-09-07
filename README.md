@@ -170,7 +170,7 @@ I'm nervous to even go here, but because this essentially is mimicking how Lisp 
 
 ## References
 
-As I got into this, I noticed that others have had similar ideas, although not with all of the same intentions as here. 
+These libraries and specs have similar ideas that are expressed here. JaneML aims to go a slightly different direction than these, though.
 
 1. [JSONML](jsonml.org) - JSON as XML
 1. [JTHON](https://github.com/jesusabdullah/jthon) - JSON with lisp
