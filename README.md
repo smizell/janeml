@@ -151,7 +151,7 @@ A template form uses a special `formt` element that works like a normal HTML `fo
 
 ### Isn't it harmful to create a new HTML spec?
 
-HTML dominates the browser world because it is supported by all of the browsers. Because of this, we have to rely on browsers to implement the HTML spec. Since JaneML's intent is for JSON, and since clients outside of the browser can adhere to whatever spec that is desired, it seemed like a great opportunity to extend on what HTML already has done.
+HTML dominates the browser world because it is supported by all of the browsers. Because of this, we have to rely on browsers to implement the HTML spec. Since JaneML's intent is for JSON, and since clients outside of the browser can adhere to whatever spec that is desired, it seemed like a great opportunity to extend on what HTML already has done and make it available in JSON.
 
 ### Doesn't this render all JSON tooling useless?
 
