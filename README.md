@@ -175,3 +175,4 @@ These libraries and specs have similar ideas that are expressed here. JaneML aim
 1. [JSONML](jsonml.org) - JSON as XML
 1. [JTHON](https://github.com/jesusabdullah/jthon) - JSON with lisp
 1. [Hiccup](https://github.com/weavejester/hiccup) - Really neat library for use with Clojure
+1. [Jade](http://jade-lang.com/) - Jade Templating language
