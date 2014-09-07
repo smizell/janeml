@@ -93,7 +93,8 @@ Because of the fact that all JSON arrays are considered elements (or potentially
 ["janeml", {},
   ["body", {},
     [".container", {},
-      ["a", {"rel": ["list", {}, "self", "collection"], "href": "/example"}, "Example "]]]]
+      ["a", {"rel": ["list", {}, "self", "collection"], "href": "/example"},
+        "Example of list element"]]]]
 ```
 
 If this example is converted to HTML, the `rel` value SHOULD be handled accordingly.
