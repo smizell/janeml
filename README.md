@@ -28,6 +28,17 @@ Please proceed cautiously!
       ["input", {"type": "submit"}]]]]
 ```
 
+### Mixed Content
+
+JaneML, though JSON, can do mixed content like in HTML.
+
+```json
+["janeml", {},
+  ["body", {},
+    ["h1", {}, "Page Title!"],
+    ["p", {}, "This is a ", ["strong", {}, "paragraph"], " in the page"],
+```
+
 ## Shorthand
 
 Shorthand element names may also be used for readability. 
@@ -82,7 +93,7 @@ Because of the fact that all JSON arrays are considered elements (or potentially
 ["janeml", {},
   ["body", {},
     [".container", {},
-      ["a", {"rel": ["list", "self", "collection"], "href": "/example"}, "Example "]]]]
+      ["a", {"rel": ["list", {}, "self", "collection"], "href": "/example"}, "Example "]]]]
 ```
 
 If this example is converted to HTML, the `rel` value SHOULD be handled accordingly.
@@ -158,13 +169,14 @@ I'm nervous to even go here, but because this essentially is mimicking how Lisp 
                                  {"id": 5,
                                   "first_name": "Jane",
                                   "last_name": "Doe"}]}],
-  ["defn", "customer-url", ["customer"], ["concat", "/customers/", ["customer", "id"]]],
+  ["defn", "customer-url", ["customer"],
+    ["concat", "/customers/", ["customer", "id"]]],
   ["body", {},
     ["h1", {}, "Customer List"],
     ["ul", {},
       ["for", ["customer", ["data", "customers"]],
         ["li", {}, 
-          ["a", {"href": ["customer-url", "customer"]},
+          ["a", {"href": ["customer-url", ["get-var", "customer"]]},
             ["concat", ["customer", "first_name"], ["customer", "last_name"]]]]]]]]
 ```
 
