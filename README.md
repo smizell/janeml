@@ -177,7 +177,7 @@ I'm nervous to even go here, but because this essentially is mimicking how Lisp 
     ["ul", {},
       ["for", ["customer", ["data", "customers"]],
         ["li", {}, 
-          ["a", {"href": ["customer-url", ["get-var", "customer"]]},
+          ["a", {"href": ["customer-url", ["customer"]]},
             ["concat", ["customer", "first_name"], ["customer", "last_name"]]]]]]]]
 ```
 
