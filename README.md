@@ -158,7 +158,7 @@ I'm nervous to even go here, but because this essentially is mimicking how Lisp 
                                  {"id": 5,
                                   "first_name": "Jane",
                                   "last_name": "Doe"}]}],
-  ["defn", "customer-url", ["concat", "/customers/", ["customer", "id"]]],
+  ["defn", "customer-url", ["customer"], ["concat", "/customers/", ["customer", "id"]]],
   ["body", {},
     ["h1", {}, "Customer List"],
     ["ul", {},
