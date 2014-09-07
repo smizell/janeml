@@ -82,7 +82,7 @@ Because of issues with JavaScript, the attribute name `className` MUST be used i
 ```json
 ["janeml", {},
   ["body", {},
-    ["p", {"className": "example"}, "Example "]
+    ["p", {"className": "example"}, "Example of class name"]
 ```
 
 ### List Element
