@@ -167,3 +167,11 @@ I'm nervous to even go here, but because this essentially is mimicking how Lisp 
           ["a", {"href": ["customer-url", "customer"]},
             ["concat", ["customer", "first_name"], ["customer", "last_name"]]]]]]]]
 ```
+
+## References
+
+As I got into this, I noticed that others have had similar ideas, although not with all of the same intentions as here. 
+
+1. [JSONML](jsonml.org) - JSON as XML
+1. [JTHON](https://github.com/jesusabdullah/jthon) - JSON with lisp
+1. [Hiccup](https://github.com/weavejester/hiccup) - Really neat library for use with Clojure
