@@ -15,7 +15,7 @@ Please proceed cautiously!
 1. Each element is a JSON array
 1. The first item of each array MUST be a string, which is the name of the element. Any HTML element is a valid.
 1. The second item of the array MUST be a JSON object, which contains attributes and their values. Valid types for attributes values are strings, numbers, booleans, null, a the special `list` element. Any HTML5 attribute is valid (depending on the element).
-1. The array MAY have more items. Every item after the attribute object is content for the element, which MAY be a string, number, boolean, null, or a new element array. Objects MUST NOT be used as items of the elements other than the attributes object. Elements without additional items SHOULD be considered self-closing.
+1. The array MAY have more items. Every item after the attribute object is content for the element, which MAY be a string, number, boolean, null, or a new element array. Objects MUST NOT be used as items of the elements other than for the attribute object (of if specified for specific elements). Elements without additional items SHOULD be considered self-closing.
 
 ```json
 ["janeml", {},
