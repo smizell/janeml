@@ -146,7 +146,9 @@ For use in forms or just for expressing data, a special `json` element may be us
 ```json
 ["janeml", {},
   ["body", {},
-    ["form", {"method": "PUT", "action": "/customers/1", "enctype": "application/json"},
+    ["form", {"method": "PUT",
+              "action": "/customers/1",
+              "enctype": "application/json"},
       ["json", {}, {"id": "4",
                     "name": "John Doe",
                     "email": "john@example.com"}]]]]
@@ -170,9 +172,13 @@ Other form elements may be used with the `json` element, but their element names
 ```json
 ["janeml", {},
   ["body", {},
-    ["form", {"method": "PUT", "action": "/customers/1", "enctype": "application/json"},
+    ["form", {"method": "PUT",
+              "action": "/customers/1",
+              "enctype": "application/json"},
       ["json", {}, {"id": "4",
-                    "name": ["~input", {"type": "text", "name": "name", "value": "John Doe"}],
+                    "name": ["~input", {"type": "text",
+                                        "name": "name",
+                                        "value": "John Doe"}],
                     "email": "john@example.com"}]]]]
 ```
 
@@ -183,9 +189,13 @@ If there is collision even with the `~`, a new character may be specified using 
   ["head", {},
     ["meta", {"name": "json-char", "content": "@"}],
   ["body", {},
-    ["form", {"method": "PUT", "action": "/customers/1", "enctype": "application/json"},
+    ["form", {"method": "PUT", 
+              "action": "/customers/1",
+              "enctype": "application/json"},
       ["json", {}, {"id": "4",
-                    "name": ["@input", {"type": "text", "name": "name", "value": "John Doe"}],
+                    "name": ["@input", {"type": "text",
+                                        "name": "name",
+                                        "value": "John Doe"}],
                     "email": "john@example.com"}]]]]]
 ```
 
@@ -196,7 +206,9 @@ To express XML data in forms, the special `xml` element MAY be used. Inside of t
 ```json
 ["janeml", {},
   ["body", {},
-    ["form", {"method": "PUT", "action": "/customers/1", "enctype": "application/xml"},
+    ["form", {"method": "PUT",
+              "action": "/customers/1",
+              "enctype": "application/xml"},
       ["xml", {},
         ["id", {}, 4],
         ["name", {}, "John Doe"],
@@ -208,11 +220,15 @@ Like with the `json` element, other form elements may be used within the `xml` e
 ```json
 ["janeml", {},
   ["body", {},
-    ["form", {"method": "PUT", "action": "/customers/1", "enctype": "application/xml"},
+    ["form", {"method": "PUT",
+              "action": "/customers/1",
+              "enctype": "application/xml"},
       ["xml", {},
         ["id", {}, 4],
         ["name", {},
-          ["~input", {"type": "text", "name": "name", "value": "John Doe"}]],
+          ["~input", {"type": "text",
+                      "name": "name",
+                      "value": "John Doe"}]],
         ["email", {}, "john@example.com"]]]]]
 ```
 
@@ -255,7 +271,10 @@ I'm nervous to even go here, but because this essentially is mimicking how Lisp 
       ["for", ["customer", ["data", "customers"]],
         ["li", {}, 
           ["a", {"href": ["customer-url", ["customer"]]},
-            ["str", ["customer", "first_name"], " ", ["customer", "last_name"]]]]]]]]
+            ["str",
+              ["customer", "first_name"],
+              " ",
+              ["customer", "last_name"]]]]]]]]
 ```
 
 ## References
