@@ -189,3 +189,4 @@ These libraries and specs have similar ideas that are expressed here. JaneML aim
 1. [JTHON](https://github.com/jesusabdullah/jthon) - JSON with lisp
 1. [Hiccup](https://github.com/weavejester/hiccup) - Really neat library for use with Clojure
 1. [Jade](http://jade-lang.com/) - Jade Templating language
+1. [React.js](http://facebook.github.io/react/index.html) - React.js and its compiled JSX
