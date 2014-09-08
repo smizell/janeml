@@ -139,6 +139,56 @@ A template form uses a special `formt` element that works like a normal HTML `fo
       ["input", {"type": "submit"}]]]]
 ```
 
+### JSON Element (Experimental)
+
+For use in forms or just for expressing data, a special `json` element may be used for JSON data. This functions like all other elements except that it MUST only have one item at most, and it MAY either be an array or an object.
+
+```json
+["janeml", {},
+  ["body", {},
+    ["form", {"method": "PUT", "action": "/customers/1", "enctype": "application/json"},
+      ["json", {}, {"id": "4",
+                    "name": "John Doe",
+                    "email": "john@example.com"}]]]]
+```
+
+In HTML5, the specific media type may be specified for a form using `enctype`, which allows for specifying that JSON Patch may be used.
+
+```json
+["janeml", {},
+  ["body", {},
+    ["form", {"method": "PATCH",
+              "action": "/customers/1",
+              "enctype": "application/json-patch+json"},
+      ["json", {}, {"id": "4",
+                    "name": "John Doe",
+                    "email": "john@example.com"}]]]]
+```
+
+Other form elements may be used with the `json` element, but their element names MUST be prefixed with a `~` to ensure there is no collision with real data.
+
+```json
+["janeml", {},
+  ["body", {},
+    ["form", {"method": "PUT", "action": "/customers/1", "enctype": "application/json"},
+      ["json", {}, {"id": "4",
+                    "name": ["~input", {"type": "text", "name": "name", "value": "John Doe"}],
+                    "email": "john@example.com"}]]]]
+```
+
+If there is collision even with the `~`, a new character may be specified using the meta attribute `json-char`.
+
+```json
+["janeml", {},
+  ["head", {},
+    ["meta", {"name": "json-char", "content": "@"}],
+  ["body", {},
+    ["form", {"method": "PUT", "action": "/customers/1", "enctype": "application/json"},
+      ["json", {}, {"id": "4",
+                    "name": ["@input", {"type": "text", "name": "name", "value": "John Doe"}],
+                    "email": "john@example.com"}]]]]]
+```
+
 ## Benefits
 
 1. JSON is supported in all the major programming languages. This means you can write HTML in native code. 
