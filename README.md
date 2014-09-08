@@ -185,7 +185,7 @@ I'm nervous to even go here, but because this essentially is mimicking how Lisp 
 
 These libraries and specs have similar ideas that are expressed here. JaneML aims to go a slightly different direction than these, though.
 
-1. [JSONML](jsonml.org) - JSON as XML
+1. [JSONML](http://jsonml.org) - JSON as XML
 1. [JTHON](https://github.com/jesusabdullah/jthon) - JSON with lisp
 1. [Hiccup](https://github.com/weavejester/hiccup) - Really neat library for use with Clojure
 1. [Jade](http://jade-lang.com/) - Jade Templating language
