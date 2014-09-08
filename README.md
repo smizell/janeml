@@ -45,8 +45,8 @@ Shorthand element names may also be used for readability.
 
 1. Any element that starts with a `#` or `.` MUST be considered a `div` element
 1. Using a `#` followed by a string denotes the `id` of the element
-1. Using a `.` followed by a string denotes the `className` of the element
-1. Element names, `id` values, and `className` values MAY be chained
+1. Using a `.` followed by a string denotes the `class` of the element
+1. Element names, `id` values, and `class` values MAY be chained
 
 ```json
 ["janeml", {},
@@ -73,16 +73,6 @@ JaneML supports all HTTP verbs in forms, whereas HTML only supports `GET` and `P
     ["form", {"method": "PUT", "action": "/customers/1"},
       ["input", {"type": "text", "name": "full_name", "value": "John Doe"}],
       ["input", {"type": "submit"}]]]]
-```
-
-### Class Attributes
-
-Because of issues with JavaScript, the attribute name `className` MUST be used in place of the HTML attribute `class`.
-
-```json
-["janeml", {},
-  ["body", {},
-    ["p", {"className": "example"}, "Example of class name"]
 ```
 
 ### List Element
