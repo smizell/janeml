@@ -1,7 +1,7 @@
 JaneML
 ------
 
-JaneML is a fun thought-experiment in thinking about JSON formats differently, specifically ways in which JSON can be used to express XML-like markup alongside Lisp-like markup. While covering all of the elements of HTML5, it aims to make additions to what HTML5 can already do. Some things to note about JaneML.
+JaneML is a fun thought-experiment in thinking about JSON formats differently, specifically ways in which JSON can be used to express XML-like markup alongside Lisp-like syntax. While covering all of the elements of HTML5, it aims to make additions to what HTML5 can already do. Some things to note about JaneML.
 
 1. It is pure JSON (though not idiomatic)
 1. It is a superset of HTML5
