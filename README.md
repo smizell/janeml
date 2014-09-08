@@ -189,6 +189,33 @@ If there is collision even with the `~`, a new character may be specified using 
                     "email": "john@example.com"}]]]]]
 ```
 
+### XML Element (Experimental)
+
+To express XML data in forms, the special `xml` element MAY be used. Inside of the `xml` element, any XML element MAY be used.
+
+```json
+["janeml", {},
+  ["body", {},
+    ["form", {"method": "PUT", "action": "/customers/1", "enctype": "application/xml"},
+      ["xml", {},
+        ["id", {}, 4],
+        ["name", {}, "John Doe"],
+        ["email", {}, "john@example.com"]]]]]
+```
+
+Like with the `json` element, other form elements may be used within the `xml` element, though they MUST be prefixed with a `~`.
+
+```json
+["janeml", {},
+  ["body", {},
+    ["form", {"method": "PUT", "action": "/customers/1", "enctype": "application/xml"},
+      ["xml", {},
+        ["id", {}, 4],
+        ["name", {},
+          ["~input", {"type": "text", "name": "name", "value": "John Doe"}]],
+        ["email", {}, "john@example.com"]]]]]
+```
+
 ## Benefits
 
 1. JSON is supported in all the major programming languages. This means you can write HTML in native code. 
