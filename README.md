@@ -286,3 +286,4 @@ These libraries and specs have similar ideas that are expressed here. JaneML aim
 1. [Hiccup](https://github.com/weavejester/hiccup) - Really neat library for use with Clojure
 1. [Jade](http://jade-lang.com/) - Jade Templating language
 1. [React.js](http://facebook.github.io/react/index.html) - React.js and its compiled JSX
+1. [MicroXML](https://dvcs.w3.org/hg/microxml/raw-file/tip/spec/microxml.html) - Representing XML in JSON
