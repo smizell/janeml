@@ -248,14 +248,14 @@ I'm nervous to even go here, but because this essentially is mimicking how Lisp 
                                   "first_name": "Jane",
                                   "last_name": "Doe"}]}],
   ["defn", "customer-url", ["customer"],
-    ["concat", "/customers/", ["customer", "id"]]],
+    ["str", "/customers/", ["customer", "id"]]],
   ["body", {},
     ["h1", {}, "Customer List"],
     ["ul", {},
       ["for", ["customer", ["data", "customers"]],
         ["li", {}, 
           ["a", {"href": ["customer-url", ["customer"]]},
-            ["concat", ["customer", "first_name"], ["customer", "last_name"]]]]]]]]
+            ["str", ["customer", "first_name"], " ", ["customer", "last_name"]]]]]]]]
 ```
 
 ## References
