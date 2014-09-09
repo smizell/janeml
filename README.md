@@ -8,7 +8,7 @@ JaneML is a fun thought-experiment in thinking about JSON formats differently, s
 1. It allows for expressing XML-like markup
 1. It is also very Lisp-like
 
-Please proceed cautiously! 
+Please don't take this too seriously, and proceed with caution! 
 
 ## Basic Syntax
 
